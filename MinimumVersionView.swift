@@ -1,11 +1,11 @@
 //
 /*
 
-  Filename: File.swift
+  Filename: MinimumVersionView.swift
  Project: Demo Project
 
 
-  Created by John Durcan on 26/09/2025.
+  Created by John Durcan on 29/09/2025.
 
   Copyright © 2025 Itch Studio Ltd.. All rights reserved.
 
@@ -46,5 +46,58 @@
 */
 
 
+import SwiftUI
 
-import Foundation
+/*
+ Example:
+
+ if #available(iOS 17.0, *) {
+ ContentView()
+ } else {
+ MinimumVersionView(version: 17)
+ }
+
+ */
+
+struct MinimumVersionView: View {
+  var version: Int
+
+  var body: some View {
+    VStack {
+      Text("Update Required")
+        .font(.title)
+        .fontWeight(.bold)
+        .padding(.bottom, 10)
+
+      Text("This app requires iOS \(version) or later to run.")
+        .font(.body)
+        .multilineTextAlignment(.center)
+        .padding(.horizontal)
+
+      Spacer()
+
+      Button(action: {
+        if let url = URL(string: "https://www.apple.com/ios/") {
+          UIApplication.shared.open(url)
+        }
+      }) {
+        Text("Learn About iOS Updates")
+          .font(.headline)
+          .padding()
+          .frame(maxWidth: .infinity)
+          .background(Color.blue)
+          .foregroundColor(.white)
+          .cornerRadius(10)
+          .padding(.horizontal)
+      }
+      .padding(.bottom)
+    }
+    .padding()
+  }
+}
+
+struct MinimumVersionView_Previews: PreviewProvider {
+  static var previews: some View {
+    MinimumVersionView(version: 17)
+  }
+}

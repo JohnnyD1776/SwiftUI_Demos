@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D2E7916E2E8AB8C8001654FF /* MinimumVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E7916D2E8AB8C8001654FF /* MinimumVersionView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D2FFEFC62E86CB92008AEB2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D2E7916D2E8AB8C8001654FF /* MinimumVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumVersionView.swift; sourceTree = "<group>"; };
 		D2FFEFB62E86CB8F008AEB2D /* Demo Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FFEFC52E86CB92008AEB2D /* Demo ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Demo ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FFEFCF2E86CB92008AEB2D /* Demo ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Demo ProjectUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		D2FFEFAD2E86CB8F008AEB2D = {
 			isa = PBXGroup;
 			children = (
+				D2E7916D2E8AB8C8001654FF /* MinimumVersionView.swift */,
 				D2FFEFB82E86CB8F008AEB2D /* Demo Project */,
 				D2FFEFC82E86CB92008AEB2D /* Demo ProjectTests */,
 				D2FFEFD22E86CB92008AEB2D /* Demo ProjectUITests */,
@@ -236,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2E7916E2E8AB8C8001654FF /* MinimumVersionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
