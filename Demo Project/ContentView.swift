@@ -51,6 +51,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
     case morphingStar
     case transitions
     case customArcProgress
+    case parallaxDemo
 
     var id: Self { self }
 
@@ -60,6 +61,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .morphingStar: return "Morphing Star"
         case .transitions: return "Transition Demos"
         case .customArcProgress: return "Custom Arc Progress"
+        case .parallaxDemo: return "Parallax Demo"
         }
     }
 
@@ -69,6 +71,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .morphingStar: return "star.circle"
         case .transitions: return "sparkles"
         case .customArcProgress: return "circle.dashed"
+        case .parallaxDemo: return "house"
         }
     }
 
@@ -83,6 +86,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
             TransitionGallery() // Your "TransitionDemos" view is named TransitionGallery
         case .customArcProgress:
           CustomArcProgress()
+        case .parallaxDemo:
+          ParallaxDemo()
         }
     }
 }

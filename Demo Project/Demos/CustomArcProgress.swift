@@ -273,3 +273,4 @@ struct ArcProgressShape: Shape {
 #Preview {
   CustomArcProgress()
 }
+
