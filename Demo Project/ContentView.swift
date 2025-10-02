@@ -52,6 +52,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
     case transitions
     case customArcProgress
     case parallaxDemo
+    case dragAndDrop
 
     var id: Self { self }
 
@@ -62,6 +63,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .transitions: return "Transition Demos"
         case .customArcProgress: return "Custom Arc Progress"
         case .parallaxDemo: return "Parallax Demo"
+        case .dragAndDrop: return "Drag & Drop"
         }
     }
 
@@ -72,6 +74,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .transitions: return "sparkles"
         case .customArcProgress: return "circle.dashed"
         case .parallaxDemo: return "house"
+        case .dragAndDrop: return "hand.draw.fill"
         }
     }
 
@@ -88,6 +91,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
           CustomArcProgress()
         case .parallaxDemo:
           ParallaxDemo()
+        case .dragAndDrop:
+          ColorSortingDragDrop()
         }
     }
 }
