@@ -53,7 +53,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
     case customArcProgress
     case parallaxDemo
     case dragAndDrop
-  case contentUnavailable
+    case contentUnavailable
+    case flappyBird
 
     var id: Self { self }
 
@@ -66,6 +67,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .parallaxDemo: return "Parallax Demo"
         case .dragAndDrop: return "Drag & Drop"
         case .contentUnavailable: return "ContentUnavailable Demo"
+        case .flappyBird: return "SwiftUI FlappyBird"
         }
     }
 
@@ -78,6 +80,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .parallaxDemo: return "house"
         case .dragAndDrop: return "hand.draw.fill"
         case .contentUnavailable: return "exclamationmark.triangle.fill"
+        case .flappyBird: return "bird.fill"
         }
     }
 
@@ -98,6 +101,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
           ColorSortingDragDrop()
         case .contentUnavailable:
           ContentUnavailableDemo()
+        case .flappyBird:
+          FlappyBirdView()
         }
     }
 }
