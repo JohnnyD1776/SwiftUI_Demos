@@ -55,6 +55,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
     case dragAndDrop
     case contentUnavailable
     case flappyBird
+    case shareLinks
 
     var id: Self { self }
 
@@ -68,6 +69,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .dragAndDrop: return "Drag & Drop"
         case .contentUnavailable: return "ContentUnavailable Demo"
         case .flappyBird: return "SwiftUI FlappyBird"
+        case .shareLinks: return "ShareLinks in SwiftUI"
         }
     }
 
@@ -81,6 +83,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .dragAndDrop: return "hand.draw.fill"
         case .contentUnavailable: return "exclamationmark.triangle.fill"
         case .flappyBird: return "bird.fill"
+        case .shareLinks: return "square.and.arrow.up"
         }
     }
 
@@ -103,6 +106,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
           ContentUnavailableDemo()
         case .flappyBird:
           FlappyBirdView()
+        case .shareLinks:
+          ShareLInkView()
         }
     }
 }
