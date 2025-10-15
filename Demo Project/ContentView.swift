@@ -56,6 +56,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
     case contentUnavailable
     case flappyBird
     case shareLinks
+  case sensorIslandPadding
 
     var id: Self { self }
 
@@ -70,6 +71,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .contentUnavailable: return "ContentUnavailable Demo"
         case .flappyBird: return "SwiftUI FlappyBird"
         case .shareLinks: return "ShareLinks in SwiftUI"
+        case .sensorIslandPadding: return "Sensor Island Padding Demo"
         }
     }
 
@@ -84,6 +86,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .contentUnavailable: return "exclamationmark.triangle.fill"
         case .flappyBird: return "bird.fill"
         case .shareLinks: return "square.and.arrow.up"
+        case .sensorIslandPadding: return "squareshape.split.2x2.dotted.inside"
         }
     }
 
@@ -108,6 +111,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
           FlappyBirdView()
         case .shareLinks:
           ShareLInkView()
+        case .sensorIslandPadding:
+          SensorIslandView()
         }
     }
 }
