@@ -59,6 +59,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
   case sensorIslandPadding
   case bbTextView
   case sFSymbolDemo
+  case timelineDemo
   
     var id: Self { self }
 
@@ -76,6 +77,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .sensorIslandPadding: return "Sensor Island Padding Demo"
         case .bbTextView: return "Simple BB TextView"
         case .sFSymbolDemo: return "SFSymbol Styles Demo"
+        case .timelineDemo: return "Timeline Demo"
         }
     }
 
@@ -93,6 +95,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .sensorIslandPadding: return "squareshape.split.2x2.dotted.inside"
         case .bbTextView: return "book.pages.fill"
         case .sFSymbolDemo: return "rectangle.grid.3x3"
+        case .timelineDemo: return "stopwatch.fill"
         }
     }
 
@@ -123,6 +126,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
           StyledTextDemo()
         case .sFSymbolDemo:
           SFSymbolDemo()
+        case .timelineDemo:
+          TimelineViewDemo()
         }
     }
 }
