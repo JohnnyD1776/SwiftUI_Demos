@@ -133,16 +133,24 @@ struct AnalogClockView: View {
         }
         .frame(width: 200, height: 200)
         .overlay(
-          Circle()
-            .fill(
-              RadialGradient(
-                gradient: Gradient(colors: [.white.opacity(0.4), .clear]),
-                center: UnitPoint(x: 0.25, y: 0.25),
-                startRadius: 0,
-                endRadius: 150
-              )
-            )
-            .blendMode(.overlay)
+          Group {
+            if #available(iOS 26.0, *) {
+              Circle()
+                .glassEffect(.clear, in: .circle)
+                .opacity(0.9)
+            } else {
+              Circle()
+                .fill(
+                  RadialGradient(
+                    gradient: Gradient(colors: [.white.opacity(0.4), .clear]),
+                    center: UnitPoint(x: 0.25, y: 0.25),
+                    startRadius: 0,
+                    endRadius: 150
+                  )
+                )
+                .blendMode(.overlay)
+            }
+          }
         )
       }
       .frame(maxWidth: .infinity, maxHeight: .infinity)
