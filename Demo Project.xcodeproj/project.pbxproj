@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF4AFBF72EA904130082EA83 /* SymbolPicker in Frameworks */ = {isa = PBXBuildFile; productRef = BF4AFBF62EA904130082EA83 /* SymbolPicker */; };
 		D2E7916E2E8AB8C8001654FF /* MinimumVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E7916D2E8AB8C8001654FF /* MinimumVersionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF4AFBF72EA904130082EA83 /* SymbolPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +120,7 @@
 			);
 			name = "Demo Project";
 			packageProductDependencies = (
+				BF4AFBF62EA904130082EA83 /* SymbolPicker */,
 			);
 			productName = "Demo Project";
 			productReference = D2FFEFB62E86CB8F008AEB2D /* Demo Project.app */;
@@ -201,6 +204,9 @@
 			);
 			mainGroup = D2FFEFAD2E86CB8F008AEB2D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BF4AFBF52EA904130082EA83 /* XCRemoteSwiftPackageReference "SymbolPicker" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D2FFEFB72E86CB8F008AEB2D /* Products */;
 			projectDirPath = "";
@@ -581,6 +587,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BF4AFBF52EA904130082EA83 /* XCRemoteSwiftPackageReference "SymbolPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xnth97/SymbolPicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BF4AFBF62EA904130082EA83 /* SymbolPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BF4AFBF52EA904130082EA83 /* XCRemoteSwiftPackageReference "SymbolPicker" */;
+			productName = SymbolPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D2FFEFAE2E86CB8F008AEB2D /* Project object */;
 }

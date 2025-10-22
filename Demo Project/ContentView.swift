@@ -58,6 +58,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
     case shareLinks
   case sensorIslandPadding
   case bbTextView
+  case sFSymbolDemo
   
     var id: Self { self }
 
@@ -74,6 +75,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .shareLinks: return "ShareLinks in SwiftUI"
         case .sensorIslandPadding: return "Sensor Island Padding Demo"
         case .bbTextView: return "Simple BB TextView"
+        case .sFSymbolDemo: return "SFSymbol Styles Demo"
         }
     }
 
@@ -90,6 +92,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .shareLinks: return "square.and.arrow.up"
         case .sensorIslandPadding: return "squareshape.split.2x2.dotted.inside"
         case .bbTextView: return "book.pages.fill"
+        case .sFSymbolDemo: return "rectangle.grid.3x3"
         }
     }
 
@@ -118,6 +121,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
           SensorIslandView()
         case .bbTextView:
           StyledTextDemo()
+        case .sFSymbolDemo:
+          SFSymbolDemo()
         }
     }
 }
