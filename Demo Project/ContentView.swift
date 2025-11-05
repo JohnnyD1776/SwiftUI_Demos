@@ -61,6 +61,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
   case sFSymbolDemo
   case timelineDemo
   case radialLayoutView
+  case precisionTimer
   
     var id: Self { self }
 
@@ -80,6 +81,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .sFSymbolDemo: return "SFSymbol Styles Demo"
         case .timelineDemo: return "Timeline Demo"
         case .radialLayoutView: return "Radial Layout Demo"
+        case .precisionTimer: return "Precise Timer Demo"
         }
     }
 
@@ -99,6 +101,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .sFSymbolDemo: return "rectangle.grid.3x3"
         case .timelineDemo: return "stopwatch.fill"
         case .radialLayoutView: return "atom"
+        case .precisionTimer: return "clock"
         }
     }
 
@@ -133,6 +136,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
           TimelineViewDemo()
         case .radialLayoutView:
           RotatableCircleView()
+        case .precisionTimer:
+          PreciseTimerDemo()
         }
     }
 }
