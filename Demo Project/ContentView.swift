@@ -59,6 +59,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
   case sensorIslandPadding
   case bbTextView
   case sFSymbolDemo
+  case sFSymbolVariablesDemo
   case timelineDemo
   case radialLayoutView
   case precisionTimer
@@ -79,6 +80,7 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .sensorIslandPadding: return "Sensor Island Padding Demo"
         case .bbTextView: return "Simple BB TextView"
         case .sFSymbolDemo: return "SFSymbol Styles Demo"
+        case .sFSymbolVariablesDemo: return "SFSymbol Variables Demo"
         case .timelineDemo: return "Timeline Demo"
         case .radialLayoutView: return "Radial Layout Demo"
         case .precisionTimer: return "Precise Timer Demo"
@@ -98,7 +100,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
         case .shareLinks: return "square.and.arrow.up"
         case .sensorIslandPadding: return "squareshape.split.2x2.dotted.inside"
         case .bbTextView: return "book.pages.fill"
-        case .sFSymbolDemo: return "rectangle.grid.3x3"
+        case .sFSymbolDemo: return "rectangle.grid.3x2"
+        case .sFSymbolVariablesDemo: return "rectangle.grid.3x3"
         case .timelineDemo: return "stopwatch.fill"
         case .radialLayoutView: return "atom"
         case .precisionTimer: return "clock"
@@ -132,6 +135,8 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
           StyledTextDemo()
         case .sFSymbolDemo:
           SFSymbolDemo()
+        case .sFSymbolVariablesDemo:
+          SFSymbolsDemoView()
         case .timelineDemo:
           TimelineViewDemo()
         case .radialLayoutView:
