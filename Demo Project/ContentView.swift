@@ -47,15 +47,15 @@
 import SwiftUI
 
 enum Demo: String, CaseIterable, Identifiable, Hashable {
-    case geometry
-    case morphingStar
-    case transitions
-    case customArcProgress
-    case parallaxDemo
-    case dragAndDrop
-    case contentUnavailable
-    case flappyBird
-    case shareLinks
+  case geometry
+  case morphingStar
+  case transitions
+  case customArcProgress
+  case parallaxDemo
+  case dragAndDrop
+  case contentUnavailable
+  case flappyBird
+  case shareLinks
   case sensorIslandPadding
   case bbTextView
   case sFSymbolDemo
@@ -63,113 +63,117 @@ enum Demo: String, CaseIterable, Identifiable, Hashable {
   case timelineDemo
   case radialLayoutView
   case precisionTimer
-  
-    var id: Self { self }
+  case textMetalReveal
 
-    var title: String {
-        switch self {
-        case .geometry: return "Geometry Demo"
-        case .morphingStar: return "Morphing Star"
-        case .transitions: return "Transition Demos"
-        case .customArcProgress: return "Custom Arc Progress"
-        case .parallaxDemo: return "Parallax Demo"
-        case .dragAndDrop: return "Drag & Drop"
-        case .contentUnavailable: return "ContentUnavailable Demo"
-        case .flappyBird: return "SwiftUI FlappyBird"
-        case .shareLinks: return "ShareLinks in SwiftUI"
-        case .sensorIslandPadding: return "Sensor Island Padding Demo"
-        case .bbTextView: return "Simple BB TextView"
-        case .sFSymbolDemo: return "SFSymbol Styles Demo"
-        case .sFSymbolVariablesDemo: return "SFSymbol Variables Demo"
-        case .timelineDemo: return "Timeline Demo"
-        case .radialLayoutView: return "Radial Layout Demo"
-        case .precisionTimer: return "Precise Timer Demo"
-        }
-    }
+  var id: Self { self }
 
-    var systemImage: String {
-        switch self {
-        case .geometry: return "rectangle.3.group.bubble.left"
-        case .morphingStar: return "star.circle"
-        case .transitions: return "sparkles"
-        case .customArcProgress: return "circle.dashed"
-        case .parallaxDemo: return "house"
-        case .dragAndDrop: return "hand.draw.fill"
-        case .contentUnavailable: return "exclamationmark.triangle.fill"
-        case .flappyBird: return "bird.fill"
-        case .shareLinks: return "square.and.arrow.up"
-        case .sensorIslandPadding: return "squareshape.split.2x2.dotted.inside"
-        case .bbTextView: return "book.pages.fill"
-        case .sFSymbolDemo: return "rectangle.grid.3x2"
-        case .sFSymbolVariablesDemo: return "rectangle.grid.3x3"
-        case .timelineDemo: return "stopwatch.fill"
-        case .radialLayoutView: return "atom"
-        case .precisionTimer: return "clock"
-        }
+  var title: String {
+    switch self {
+    case .geometry: return "Geometry Demo"
+    case .morphingStar: return "Morphing Star"
+    case .transitions: return "Transition Demos"
+    case .customArcProgress: return "Custom Arc Progress"
+    case .parallaxDemo: return "Parallax Demo"
+    case .dragAndDrop: return "Drag & Drop"
+    case .contentUnavailable: return "ContentUnavailable Demo"
+    case .flappyBird: return "SwiftUI FlappyBird"
+    case .shareLinks: return "ShareLinks in SwiftUI"
+    case .sensorIslandPadding: return "Sensor Island Padding Demo"
+    case .bbTextView: return "Simple BB TextView"
+    case .sFSymbolDemo: return "SFSymbol Styles Demo"
+    case .sFSymbolVariablesDemo: return "SFSymbol Variables Demo"
+    case .timelineDemo: return "Timeline Demo"
+    case .radialLayoutView: return "Radial Layout Demo"
+    case .precisionTimer: return "Precise Timer Demo"
+    case .textMetalReveal: return "Text Metal Reveal"
     }
+  }
 
-    @ViewBuilder
-    func destinationView() -> some View {
-        switch self {
-        case .geometry:
-            GeometryDemoView()
-        case .morphingStar:
-            MorphingStarView()
-        case .transitions:
-            TransitionGallery() // Your "TransitionDemos" view is named TransitionGallery
-        case .customArcProgress:
-          CustomArcProgress()
-        case .parallaxDemo:
-          ParallaxDemo()
-        case .dragAndDrop:
-          ColorSortingDragDrop()
-        case .contentUnavailable:
-          ContentUnavailableDemo()
-        case .flappyBird:
-          FlappyBirdView()
-        case .shareLinks:
-          ShareLInkView()
-        case .sensorIslandPadding:
-          SensorIslandView()
-        case .bbTextView:
-          StyledTextDemo()
-        case .sFSymbolDemo:
-          SFSymbolDemo()
-        case .sFSymbolVariablesDemo:
-          SFSymbolsDemoView()
-        case .timelineDemo:
-          TimelineViewDemo()
-        case .radialLayoutView:
-          RotatableCircleView()
-        case .precisionTimer:
-          PreciseTimerDemo()
-        }
+  var systemImage: String {
+    switch self {
+    case .geometry: return "rectangle.3.group.bubble.left"
+    case .morphingStar: return "star.circle"
+    case .transitions: return "sparkles"
+    case .customArcProgress: return "circle.dashed"
+    case .parallaxDemo: return "house"
+    case .dragAndDrop: return "hand.draw.fill"
+    case .contentUnavailable: return "exclamationmark.triangle.fill"
+    case .flappyBird: return "bird.fill"
+    case .shareLinks: return "square.and.arrow.up"
+    case .sensorIslandPadding: return "squareshape.split.2x2.dotted.inside"
+    case .bbTextView: return "book.pages.fill"
+    case .sFSymbolDemo: return "rectangle.grid.3x2"
+    case .sFSymbolVariablesDemo: return "rectangle.grid.3x3"
+    case .timelineDemo: return "stopwatch.fill"
+    case .radialLayoutView: return "atom"
+    case .precisionTimer: return "clock"
+    case .textMetalReveal: return "text.cursor"
     }
+  }
+
+  @ViewBuilder
+  func destinationView() -> some View {
+    switch self {
+    case .geometry:
+      GeometryDemoView()
+    case .morphingStar:
+      MorphingStarView()
+    case .transitions:
+      TransitionGallery()  // Your "TransitionDemos" view is named TransitionGallery
+    case .customArcProgress:
+      CustomArcProgress()
+    case .parallaxDemo:
+      ParallaxDemo()
+    case .dragAndDrop:
+      ColorSortingDragDrop()
+    case .contentUnavailable:
+      ContentUnavailableDemo()
+    case .flappyBird:
+      FlappyBirdView()
+    case .shareLinks:
+      ShareLInkView()
+    case .sensorIslandPadding:
+      SensorIslandView()
+    case .bbTextView:
+      StyledTextDemo()
+    case .sFSymbolDemo:
+      SFSymbolDemo()
+    case .sFSymbolVariablesDemo:
+      SFSymbolsDemoView()
+    case .timelineDemo:
+      TimelineViewDemo()
+    case .radialLayoutView:
+      RotatableCircleView()
+    case .precisionTimer:
+      PreciseTimerDemo()
+    case .textMetalReveal:
+      TextMetalRevealEffectView()
+    }
+  }
 }
 
 struct ContentView: View {
-    @State private var selectedDemo: Demo? = nil
+  @State private var selectedDemo: Demo? = nil
 
-    var body: some View {
-        NavigationSplitView {
-            List(Demo.allCases, selection: $selectedDemo) { demo in
-                Label(demo.title, systemImage: demo.systemImage)
-                    .tag(demo)
-            }
-            .navigationTitle("Demos")
-        } detail: {
-            if let demo = selectedDemo {
-                demo.destinationView()
-                    .navigationTitle(demo.title)
-            } else {
-                Text("Select a demo")
-                    .foregroundStyle(.secondary)
-            }
-        }
+  var body: some View {
+    NavigationSplitView {
+      List(Demo.allCases, selection: $selectedDemo) { demo in
+        Label(demo.title, systemImage: demo.systemImage)
+          .tag(demo)
+      }
+      .navigationTitle("Demos")
+    } detail: {
+      if let demo = selectedDemo {
+        demo.destinationView()
+          .navigationTitle(demo.title)
+      } else {
+        Text("Select a demo")
+          .foregroundStyle(.secondary)
+      }
     }
+  }
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }
-
